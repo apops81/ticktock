@@ -12,8 +12,10 @@
 <style>
 @font-face{font-family:'GF';src:local('SF Pro Rounded'),local('Arial Rounded MT Bold'),local('Helvetica Neue');font-weight:bold}
 :root{
-  --sky:#6EC6FF;--sun:#FFD93D;--coral:#FF6B6B;--mint:#6BFFB8;
-  --purple:#C77DFF;--navy:#1A1A4E;--pink:#FF85C2;--orange:#FF9F43;
+  --sky:#6EC6FF;--sun:#F59E0B;--coral:#EF4444;--mint:#10B981;
+  --purple:#C77DFF;--navy:#1A1A4E;--pink:#FF85C2;--orange:#F59E0B;
+  --blue:#2563EB;--blue-d:#1D4ED8;--green:#10B981;--green-d:#059669;
+  --amber:#F59E0B;--amber-d:#B45309;--red:#EF4444;--red-d:#B91C1C;
   --ff:'Arial Rounded MT Bold','SF Pro Rounded',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
   --vh:1vh;
 }
@@ -128,16 +130,16 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
 .btn:hover{transform:scale(1.06) translateY(-2px)}
 .btn:active{transform:scale(.94)}
 .btn-go{
-  background:linear-gradient(135deg,var(--sun),var(--orange));
-  color:var(--navy);
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);
+  color:white;
   font-size:clamp(1.1rem,4vw,1.5rem);
   padding:clamp(12px,3vh,18px) clamp(28px,8vw,56px);
-  box-shadow:0 5px 0 #b56e00;
+  box-shadow:0 5px 0 #1E3A8A;
   animation:pulseGlow 2s infinite;
 }
-.btn-go:hover{box-shadow:0 2px 0 #b56e00}
-.btn-next{background:linear-gradient(135deg,var(--mint),#00d4a1);color:var(--navy);box-shadow:0 5px 0 #00956e}
-.btn-retry{background:linear-gradient(135deg,var(--coral),#ff4757);color:white;box-shadow:0 5px 0 #9e1a1a}
+.btn-go:hover{box-shadow:0 2px 0 #1E3A8A}
+.btn-next{background:linear-gradient(135deg,#10B981,#059669);color:white;box-shadow:0 5px 0 #047857}
+.btn-retry{background:linear-gradient(135deg,#EF4444,#DC2626);color:white;box-shadow:0 5px 0 #991B1B}
 .btn-home{background:rgba(255,255,255,.12);color:white;border:2px solid rgba(255,255,255,.22);margin-top:8px}
 
 /* ── TITLE SCREEN ── */
@@ -159,10 +161,10 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   border-radius:22px;padding:clamp(12px,2.5vh,20px) clamp(14px,3vw,22px);
   width:100%;backdrop-filter:blur(8px);
 }
-.reg-h{font-family:var(--ff);font-size:clamp(1.2rem,4vw,1.6rem);color:var(--sun);text-align:center;margin-bottom:4px}
+.reg-h{font-family:var(--ff);font-size:clamp(1.2rem,4vw,1.6rem);color:#F59E0B;text-align:center;margin-bottom:4px}
 .reg-sub{color:var(--mint);font-weight:800;text-align:center;margin-bottom:12px;font-size:clamp(.8rem,2.8vw,.95rem)}
 .form-row{margin-bottom:clamp(8px,1.5vh,14px)}
-.form-lbl{font-family:var(--ff);font-size:clamp(.8rem,3vw,.95rem);color:var(--sky);display:block;margin-bottom:5px}
+.form-lbl{font-family:var(--ff);font-size:clamp(.8rem,3vw,.95rem);color:#93C5FD;display:block;margin-bottom:5px}
 .form-inp{
   width:100%;font-family:var(--ff);
   font-size:max(1rem,16px);
@@ -170,7 +172,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25);
   border-radius:14px;color:white;outline:none;transition:border-color .2s;
 }
-.form-inp:focus{border-color:var(--sun)}
+.form-inp:focus{border-color:#2563EB}
 .form-inp::placeholder{color:rgba(255,255,255,.3)}
 .form-inp-sm{width:130px}
 
@@ -208,7 +210,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   border-radius:22px;padding:clamp(10px,2vh,18px) clamp(12px,3vw,20px);
   width:100%;backdrop-filter:blur(8px);
 }
-.teach-h2{font-family:var(--ff);font-size:clamp(1.1rem,4vw,1.5rem);color:var(--sun);margin-bottom:4px;line-height:1.2}
+.teach-h2{font-family:var(--ff);font-size:clamp(1.1rem,4vw,1.5rem);color:#F59E0B;margin-bottom:4px;line-height:1.2}
 .teach-sub{color:white;font-size:clamp(.82rem,2.8vw,.98rem);font-weight:800;margin-bottom:8px;line-height:1.35}
 .tip{
   background:rgba(255,255,255,.1);border-radius:14px;
@@ -234,7 +236,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   padding:3px 12px;border-radius:50px;
   font-size:clamp(.72rem,2.5vw,.82rem);margin-bottom:8px;
 }
-.example-label{font-family:var(--ff);color:var(--sun);font-size:clamp(.82rem,3vw,.98rem);margin:6px 0 3px}
+.example-label{font-family:var(--ff);color:#F59E0B;font-size:clamp(.82rem,3vw,.98rem);margin:6px 0 3px}
 .teach-go-btn{width:100%;font-size:clamp(1rem,3.5vw,1.2rem);margin-top:10px}
 
 /* ── GAME SCREEN ── */
@@ -244,7 +246,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   border-radius:14px;padding:5px 10px;margin-bottom:5px;flex-shrink:0;
 }
 .player-av{font-size:clamp(1.3rem,4vw,1.6rem)}
-.player-name{font-family:var(--ff);font-size:clamp(.85rem,3vw,1rem);color:var(--sun)}
+.player-name{font-family:var(--ff);font-size:clamp(.85rem,3vw,1rem);color:#F59E0B}
 .player-age{font-size:clamp(.68rem,2.2vw,.78rem);color:rgba(255,255,255,.5);font-weight:700}
 .score-bar{
   display:flex;justify-content:space-between;align-items:center;width:100%;
@@ -252,9 +254,9 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   margin-bottom:5px;border:1.5px solid rgba(255,255,255,.15);font-weight:800;
   flex-shrink:0;
 }
-.score-val{color:var(--sun);font-family:var(--ff);font-size:clamp(1.1rem,3.5vw,1.3rem)}
+.score-val{color:#F59E0B;font-family:var(--ff);font-size:clamp(1.1rem,3.5vw,1.3rem)}
 .level-badge{
-  background:linear-gradient(135deg,var(--coral),#ff4757);
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);
   font-family:var(--ff);padding:4px 14px;border-radius:50px;
   font-size:clamp(.78rem,2.8vw,.9rem);
 }
@@ -266,7 +268,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   height:8px;margin-bottom:6px;overflow:hidden;
   border:1.5px solid rgba(255,255,255,.15);flex-shrink:0;
 }
-.prog-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--mint),var(--sky));transition:width .5s ease}
+.prog-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,#10B981,#2563EB);transition:width .5s ease}
 
 /* ── QUESTION AREA — fills all remaining space, never overflows ── */
 .q-area{
@@ -309,8 +311,8 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   width:100%;
 }
 .mc-btn:hover:not(:disabled){transform:scale(1.03);background:rgba(255,255,255,.18);border-color:var(--sky)}
-.mc-btn.correct{background:linear-gradient(135deg,#00b894,#00d4a1)!important;border-color:var(--mint)!important;animation:celebrate .5s ease}
-.mc-btn.wrong{background:linear-gradient(135deg,#e74c3c,#ff6b6b)!important;border-color:var(--coral)!important;animation:shake .4s ease}
+.mc-btn.correct{background:linear-gradient(135deg,#10B981,#059669)!important;border-color:#34D399!important;animation:celebrate .5s ease}
+.mc-btn.wrong{background:linear-gradient(135deg,#EF4444,#DC2626)!important;border-color:#FCA5A5!important;animation:shake .4s ease}
 .mc-btn:disabled{cursor:default}
 
 /* TYPE-IN */
@@ -331,18 +333,18 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
   font-family:var(--ff);font-size:clamp(.95rem,3.5vw,1.2rem);
   padding:clamp(10px,2vh,14px) clamp(22px,6vw,34px);
   border:none;border-radius:50px;cursor:pointer;
-  background:linear-gradient(135deg,var(--sky),#4da6e0);color:white;
-  box-shadow:0 4px 0 #2674a8;transition:all .18s;margin-top:8px;
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);color:white;
+  box-shadow:0 4px 0 #1E3A8A;transition:all .18s;margin-top:8px;
 }
 .submit-btn:hover{transform:translateY(-2px)}
-.submit-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #2674a8}
+.submit-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #1E3A8A}
 .submit-btn:disabled{opacity:.6;cursor:default}
 .feedback{font-family:var(--ff);font-size:clamp(.9rem,3.5vw,1.25rem);min-height:0;margin:2px 0}
-.feedback.ok{color:var(--mint);animation:pop .4s ease}
-.feedback.bad{color:var(--coral);animation:shake .4s ease}
+.feedback.ok{color:#10B981;animation:pop .4s ease}
+.feedback.bad{color:#EF4444;animation:shake .4s ease}
 .bonus-badge{
-  display:inline-block;background:linear-gradient(135deg,var(--sun),var(--orange));
-  color:var(--navy);font-family:var(--ff);
+  display:inline-block;background:linear-gradient(135deg,#F59E0B,#D97706);
+  color:white;font-family:var(--ff);
   padding:3px 12px;border-radius:50px;font-size:.82rem;margin-left:6px;animation:pop .3s ease;
 }
 
@@ -418,7 +420,7 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
 .big-emoji{font-size:clamp(2.5rem,8vw,4rem);display:block;animation:wiggle 1.2s infinite;margin:4px 0}
 .lc-h2{
   font-family:var(--ff);font-size:clamp(1.4rem,5.5vw,2.5rem);
-  color:var(--sun);text-shadow:2px 2px 0 var(--coral);
+  color:#F59E0B;text-shadow:2px 2px 0 #B45309;
   margin-bottom:6px;animation:rainbow 3s infinite;
 }
 .stars-row{display:flex;justify-content:center;gap:8px;margin:6px 0}
@@ -427,11 +429,11 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
 .stat-box{background:rgba(255,255,255,.09);border-radius:14px;padding:clamp(8px,1.5vh,12px);border:1.5px solid rgba(255,255,255,.12)}
 .stat-lbl{font-size:clamp(.68rem,2.2vw,.78rem);color:rgba(255,255,255,.6);font-weight:800}
-.stat-val{font-family:var(--ff);font-size:clamp(1.3rem,4.5vw,1.7rem);color:var(--sun)}
+.stat-val{font-family:var(--ff);font-size:clamp(1.3rem,4.5vw,1.7rem);color:#F59E0B}
 .next-hint{
-  color:rgba(255,255,255,.65);font-size:clamp(.75rem,2.5vw,.88rem);font-weight:700;
-  padding:7px 12px;background:rgba(255,255,255,.05);border-radius:12px;
-  border:1px solid rgba(255,255,255,.1);margin-top:6px;display:block;
+  color:rgba(255,255,255,.9);font-size:clamp(.75rem,2.5vw,.88rem);font-weight:700;
+  padding:7px 12px;background:rgba(37,99,235,.15);border-radius:12px;
+  border:1px solid rgba(37,99,235,.4);margin-top:6px;display:block;
 }
 .lc-btns{display:flex;flex-direction:column;gap:8px;margin-top:10px;width:100%;align-items:center}
 
@@ -439,32 +441,44 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
 .review-section{width:100%;margin:8px 0;text-align:left}
 .review-title{font-family:var(--ff);font-size:clamp(.85rem,3vw,.98rem);color:var(--sun);margin-bottom:6px;text-align:center}
 .review-card{
-  background:rgba(255,255,255,.07);border:1.5px solid rgba(255,107,107,.3);
+  background:rgba(255,255,255,.07);border:1.5px solid rgba(239,68,68,.35);
   border-radius:14px;padding:clamp(8px,1.5vh,12px);margin-bottom:8px;
   animation:revSlide .4s ease both;
 }
 .review-card:nth-child(2){animation-delay:.1s}.review-card:nth-child(3){animation-delay:.2s}
 .review-clock-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
-.review-wrong{color:var(--coral);font-weight:800;font-size:clamp(.78rem,2.8vw,.9rem);margin-bottom:3px}
-.review-correct{color:var(--mint);font-weight:800;font-size:clamp(.78rem,2.8vw,.9rem);margin-bottom:4px}
+.review-wrong{color:#EF4444;font-weight:800;font-size:clamp(.78rem,2.8vw,.9rem);margin-bottom:3px}
+.review-correct{color:#10B981;font-weight:800;font-size:clamp(.78rem,2.8vw,.9rem);margin-bottom:4px}
 .review-explain{
-  color:rgba(255,255,255,.85);font-size:clamp(.72rem,2.5vw,.85rem);font-weight:700;
-  background:rgba(255,255,255,.05);border-radius:8px;padding:6px 10px;line-height:1.45;margin-top:6px;
+  color:rgba(255,255,255,.92);font-size:clamp(.8rem,2.8vw,.92rem);font-weight:700;
+  background:rgba(255,255,255,.06);border-radius:8px;padding:8px 10px;line-height:1.5;margin-top:6px;
 }
+.review-read-btn{
+  display:flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,#7C3AED,#5B21B6);
+  border:none;border-radius:50px;
+  padding:8px 16px;margin-top:8px;
+  font-family:var(--ff);font-size:clamp(.78rem,2.8vw,.9rem);
+  color:white;cursor:pointer;transition:all .18s;width:100%;justify-content:center;
+}
+.review-read-btn:hover{transform:scale(1.03);opacity:.9}
+.review-read-btn.reading-now{background:linear-gradient(135deg,#DC2626,#B91C1C)}
 
 /* ── GAME OVER ── */
 .go-inner{width:100%;text-align:center}
 .go-emoji{font-size:clamp(2.5rem,7vw,3.5rem);margin-bottom:6px;display:block}
 .go-h2{
   font-family:var(--ff);font-size:clamp(1.3rem,5vw,2rem);
-  color:var(--coral);text-shadow:2px 2px 0 #8b0000;margin-bottom:8px;
+  color:#EF4444;text-shadow:2px 2px 0 #7F1D1D;margin-bottom:8px;
 }
 .go-tip-box{
-  background:rgba(255,255,255,.07);border-radius:14px;
+  background:linear-gradient(135deg,rgba(255,217,61,.15),rgba(255,159,67,.1));
+  border:2px solid rgba(255,217,61,.5);
+  border-radius:14px;
   padding:clamp(8px,1.5vh,12px);margin:8px 0;
 }
-.go-tip-lbl{font-size:clamp(.72rem,2.3vw,.82rem);color:rgba(255,255,255,.5);font-weight:800;margin-bottom:4px}
-.go-tip-text{font-weight:800;color:white;font-size:clamp(.82rem,2.8vw,.95rem);line-height:1.45}
+.go-tip-lbl{font-size:clamp(.75rem,2.5vw,.86rem);color:#FFD93D;font-weight:900;margin-bottom:6px;letter-spacing:.5px}
+.go-tip-text{font-weight:800;color:white;font-size:clamp(.85rem,3vw,1rem);line-height:1.5}
 .go-btns{display:flex;flex-direction:column;gap:8px;margin-top:10px;width:100%;align-items:center}
 
 /* ── FINAL WIN ── */
@@ -472,19 +486,19 @@ body.theme-girl{background:linear-gradient(160deg,#4a90d9 0%,#87ceeb 40%,#b8a0e8
 .trophy{font-size:clamp(2.5rem,7vw,4rem);display:block;margin:4px 0;animation:bounce 1.5s infinite}
 .fw-h2{font-family:var(--ff);font-size:clamp(1.3rem,5vw,2.2rem);margin-bottom:6px;animation:rainbow 2s infinite}
 .fw-sub{color:var(--mint);font-size:clamp(.78rem,2.8vw,.92rem);font-weight:800;margin-bottom:8px}
-.fw-run-box{background:linear-gradient(135deg,var(--sun),var(--orange));border-radius:18px;padding:10px 14px;margin:6px 0}
+.fw-run-box{background:linear-gradient(135deg,#2563EB,#1D4ED8);border-radius:18px;padding:10px 14px;margin:6px 0}
 .fw-run-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .fw-run-cell{background:rgba(255,255,255,.25);border-radius:12px;padding:8px 6px;text-align:center}
-.fw-run-lbl{font-size:clamp(.68rem,2.2vw,.78rem);font-weight:800;color:rgba(26,26,78,.7)}
-.fw-run-val{font-family:var(--ff);font-size:clamp(1.3rem,4.5vw,1.7rem);color:#1A1A4E}
+.fw-run-lbl{font-size:clamp(.68rem,2.2vw,.78rem);font-weight:800;color:rgba(255,255,255,.75)}
+.fw-run-val{font-family:var(--ff);font-size:clamp(1.3rem,4.5vw,1.7rem);color:white}
 .sb-board{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:18px;padding:10px 14px;margin:6px 0;width:100%}
-.sb-title{font-family:var(--ff);font-size:clamp(.88rem,3vw,1rem);color:var(--sun);margin-bottom:6px;text-align:center}
+.sb-title{font-family:var(--ff);font-size:clamp(.88rem,3vw,1rem);color:#F59E0B;margin-bottom:6px;text-align:center}
 .sb-row{display:grid;grid-template-columns:24px 1fr auto auto;align-items:center;gap:6px;padding:5px 8px;border-radius:10px;margin-bottom:4px;background:rgba(255,255,255,.06);font-size:clamp(.75rem,2.5vw,.85rem);font-weight:800}
-.sb-row.sb-new{background:linear-gradient(135deg,rgba(107,255,184,.2),rgba(110,198,255,.15));border:1.5px solid rgba(107,255,184,.4)}
-.sb-row.sb-best{background:linear-gradient(135deg,rgba(255,217,61,.18),rgba(255,159,67,.12));border:1.5px solid rgba(255,217,61,.35)}
+.sb-row.sb-new{background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(37,99,235,.15));border:1.5px solid rgba(16,185,129,.4)}
+.sb-row.sb-best{background:linear-gradient(135deg,rgba(245,158,11,.18),rgba(37,99,235,.12));border:1.5px solid rgba(245,158,11,.4)}
 .sb-rank{font-family:var(--ff);font-size:clamp(.88rem,3vw,1rem);text-align:center}
-.sb-name{color:white}.sb-pts{color:var(--sun);font-family:var(--ff);text-align:right;font-size:clamp(.75rem,2.5vw,.85rem)}
-.sb-time{color:var(--mint);font-family:var(--ff);text-align:right;font-size:clamp(.75rem,2.5vw,.85rem);min-width:42px}
+.sb-name{color:white}.sb-pts{color:#F59E0B;font-family:var(--ff);text-align:right;font-size:clamp(.75rem,2.5vw,.85rem)}
+.sb-time{color:#10B981;font-family:var(--ff);text-align:right;font-size:clamp(.75rem,2.5vw,.85rem);min-width:42px}
 .sb-hdr{display:grid;grid-template-columns:24px 1fr auto auto;gap:6px;padding:0 8px 5px;font-size:clamp(.62rem,2vw,.7rem);color:rgba(255,255,255,.4);font-weight:800;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:4px}
 .skill-list{font-size:clamp(.68rem,2.2vw,.8rem);color:rgba(255,255,255,.7);font-weight:700;line-height:1.8;margin:6px 0}
 .fw-btns{display:flex;flex-direction:column;gap:8px;margin-top:8px;width:100%;align-items:center}
@@ -505,11 +519,11 @@ body.theme-girl .memory-box{background:rgba(180,100,255,.15);color:#1A1A4E}
 body.theme-girl .q-text{color:#1A1A4E}
 body.theme-girl .mc-btn{background:rgba(255,255,255,.28);color:#1A1A4E;border-color:rgba(180,100,255,.4)}
 body.theme-girl .score-bar{background:rgba(255,255,255,.28);color:#1A1A4E}
-body.theme-girl .score-val{color:#6b2da8}
-body.theme-girl .level-badge{background:linear-gradient(135deg,#b94dca,#8b2da8)}
+body.theme-girl .score-val{color:#7C3AED}
+body.theme-girl .level-badge{background:linear-gradient(135deg,#7C3AED,#6D28D9)}
 body.theme-girl .player-bar{background:rgba(255,255,255,.25)}
-body.theme-girl .player-name{color:#6b2da8}
-body.theme-girl .prog-bar{background:linear-gradient(90deg,#c77dff,#87ceeb)}
+body.theme-girl .player-name{color:#7C3AED}
+body.theme-girl .prog-bar{background:linear-gradient(90deg,#10B981,#7C3AED)}
 body.theme-girl .feedback.ok{color:#1a7a4a}
 
 /* ── SHOP SCREEN ── */
@@ -517,11 +531,11 @@ body.theme-girl .feedback.ok{color:#1a7a4a}
 .shop-screen.active{display:flex}
 .shop-header{display:flex;align-items:center;justify-content:space-between;padding:6px 14px;flex-shrink:0}
 .shop-title{font-family:var(--ff);font-size:clamp(1.2rem,4vw,1.6rem);color:var(--sun)}
-.coin-pill{background:rgba(255,215,0,.2);border:2px solid var(--sun);border-radius:50px;padding:5px 14px;font-family:var(--ff);font-size:1rem;color:var(--sun);display:flex;align-items:center;gap:6px}
+.coin-pill{background:rgba(245,158,11,.2);border:2px solid #F59E0B;border-radius:50px;padding:5px 14px;font-family:var(--ff);font-size:1rem;color:#F59E0B;display:flex;align-items:center;gap:6px}
 .shop-tabs{display:flex;flex-wrap:wrap;gap:5px;padding:4px 10px 6px;flex-shrink:0}
 .shop-tabs::-webkit-scrollbar{display:none}
 .shop-tab{font-family:var(--ff);font-size:clamp(.65rem,2.2vw,.8rem);padding:6px 10px;border-radius:50px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .18s}
-.shop-tab.active{background:var(--sun);color:var(--navy);border-color:var(--sun)}
+.shop-tab.active{background:#2563EB;color:white;border-color:#1D4ED8}
 .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 10px 10px;overflow-y:auto;flex:1;min-height:0;-webkit-overflow-scrolling:touch}
 .shop-item{background:rgba(255,255,255,.08);border:2.5px solid rgba(255,255,255,.15);border-radius:18px;padding:10px 6px 8px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
 .shop-item:hover{transform:scale(1.04);border-color:rgba(255,255,255,.35)}
@@ -603,16 +617,30 @@ body.theme-girl .feedback.ok{color:#1a7a4a}
     </div>
   </div>
 
-  <!-- TEACH -->
-  <div id="s-teach" class="screen-scroll">
-    <div class="scroll-inner">
-      <div class="teach-panel">
-        <div id="teach-body"></div>
-        <button class="read-btn" id="read-aloud-btn" onclick="readTeachAloud()">
-          <span class="read-btn-icon">🔊</span>
-          <span id="read-btn-label">Read it to me! 🔊</span>
-        </button>
-        <button class="btn btn-next teach-go-btn" onclick="startLevel()">I am ready! Let's go! 🎮</button>
+  <!-- TEACH — clean minimal screen, tips in popup -->
+  <div id="s-teach" class="screen">
+    <div id="teach-intro" style="width:100%;text-align:center;animation:fadeUp .4s ease;padding:0 4px"></div>
+    <div style="display:flex;flex-direction:column;gap:10px;width:100%;margin-top:10px;padding:0 4px">
+      <button class="btn btn-next" onclick="showTeachPopup()" style="font-size:clamp(1rem,4vw,1.3rem);padding:clamp(12px,3vh,16px)">
+        🎓 Learn First!
+      </button>
+      <button class="btn btn-go" onclick="startLevel()" style="font-size:clamp(1rem,4vw,1.3rem);padding:clamp(12px,3vh,16px)">
+        🎮 I Know This! Let's Go!
+      </button>
+    </div>
+  </div>
+
+  <!-- TEACH POPUP OVERLAY -->
+  <div id="teach-popup-overlay" style="display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:12px">
+    <div id="teach-popup-box" style="width:100%;max-width:520px;max-height:85dvh;overflow-y:auto;background:linear-gradient(145deg,#1e1e5c,#12123a);border:3px solid #FFD93D;border-radius:28px;padding:20px 18px;animation:pop .35s ease">
+      <div id="teach-popup-body"></div>
+      <button class="read-btn" id="read-aloud-btn" onclick="readTeachAloud()" style="margin-top:10px">
+        <span class="read-btn-icon">🔊</span>
+        <span id="read-btn-label">Read it to me! 🔊</span>
+      </button>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn btn-home" onclick="closeTeachPopup()" style="flex:1;font-size:.9rem">✕ Close</button>
+        <button class="btn btn-go" onclick="closeTeachPopup();startLevel();" style="flex:2;font-size:clamp(.95rem,3.5vw,1.15rem)">🎮 Let's Go!</button>
       </div>
     </div>
   </div>
@@ -978,33 +1006,69 @@ function stopReading(){
 // Wrong answer explanations — child friendly
 function getExplanation(type, h, m, wrongAnswer) {
   var pad = function(v){return String(v).padStart(2,'0');};
-  var correct = h+' '+pad(m); // spoken as "3 oh 7" not "3:07"
-  var correctDisp = h+':'+pad(m); // display version with colon
   var nextH = h===12?1:h+1;
+  var prevH = h===1?12:h-1;
+
+  // Key teaching point: the HOUR hand moves slowly between numbers.
+  // When minutes > 0, the hour hand is always BETWEEN hours — 
+  // we always use the number it has most recently PASSED.
+  // Wording must reflect what the child actually SEES on the clock.
+
   if(type==='oclock'){
-    return "The long GREEN hand was pointing UP to 12. That means oh clock! The short PINK hand was pointing to "+h+". So the answer is "+h+" oh clock!";
+    return "The long GREEN hand was pointing straight UP to 12. "
+      +"That means O'Clock! The short PINK hand was pointing right at "+h+". "
+      +"So the answer is "+h+" o'clock!";
   }
+
   if(type==='half'){
-    return "The long GREEN hand was pointing DOWN to 6. That means Half Past! The short PINK hand had just passed "+h+". So the answer is Half past "+h+"!";
+    return "The long GREEN hand was pointing straight DOWN to 6. "
+      +"That means Half Past! "
+      +"The short PINK hand was between "+h+" and "+nextH+" — "
+      +"because it has passed "+h+" but not yet reached "+nextH+". "
+      +"When the hand is between two numbers, always use the one it has already passed. "
+      +"So the answer is Half past "+h+"!";
   }
+
   if(type==='quarter'&&m===15){
-    return "The long GREEN hand was on 3. That means Quarter PAST! The short PINK hand had just passed "+h+". So the answer is Quarter past "+h+"!";
+    return "The long GREEN hand was on 3. That means Quarter Past! "
+      +"The short PINK hand was between "+h+" and "+nextH+" — "
+      +"it has just passed "+h+" but not yet reached "+nextH+". "
+      +"Always use the number the short hand has already passed. "
+      +"So the answer is Quarter past "+h+"!";
   }
+
   if(type==='quarter'&&m===45){
-    return "The long GREEN hand was on 9. That means Quarter TO! The next hour is "+nextH+". So the answer is Quarter to "+nextH+"!";
+    return "The long GREEN hand was on 9. That means Quarter To! "
+      +"The short PINK hand was between "+h+" and "+nextH+" — "
+      +"it has passed "+h+" and is getting close to "+nextH+". "
+      +"Quarter To means 15 min-its until the NEXT hour. "
+      +"So the answer is Quarter to "+nextH+"!";
   }
+
   if(type==='five'||type==='any'){
     var mins5 = Math.floor(m/5)*5;
     var extra = m - mins5;
     var bigNum = Math.floor(m/5);
     if(bigNum===0) bigNum=12;
+    // Describe hour hand position honestly
+    var hourDesc = m < 30
+      ? "The short PINK hand was between "+h+" and "+nextH+" — it has just passed "+h+"."
+      : "The short PINK hand was between "+h+" and "+nextH+" — it was getting closer to "+nextH+" but had not reached it yet.";
     if(extra>0){
-      return "The long GREEN hand was just past "+bigNum+". "+bigNum+" times 5 is "+mins5+" min-its, then "+extra+" more little marks is "+m+" min-its! The short PINK hand was on "+h+". So the answer is "+h+" "+pad(m)+"!";
+      return "The long GREEN hand had just passed "+bigNum+". "
+        +bigNum+" times 5 is "+mins5+" min-its, then count "+extra+" more little mark"+(extra>1?"s":"")+" — that gives "+m+" min-its! "
+        +hourDesc
+        +" We always use the number the short hand has already passed, which is "+h+". "
+        +"So the answer is "+h+":"+pad(m)+"!";
     } else {
-      return "The long GREEN hand was pointing at "+bigNum+". "+bigNum+" times 5 is "+m+" min-its! The short PINK hand was on "+h+". So the answer is "+h+" "+pad(m)+"!";
+      return "The long GREEN hand was pointing right at "+bigNum+". "
+        +bigNum+" times 5 is "+m+" min-its! "
+        +hourDesc
+        +" We always use the number the short hand has already passed, which is "+h+". "
+        +"So the answer is "+h+":"+pad(m)+"!";
     }
   }
-  return "The right answer was "+h+' '+pad(m)+". Keep practising, you will get it!";
+  return "The right answer was "+h+":"+pad(m)+". Keep practising — you will get it!";
 }
 
 // ═══ STATE ═══
@@ -2253,18 +2317,49 @@ function retryLevel(){G.lives=MAX_LIVES;G.perfect=true;G.correct=0;G.wrongAnswer
 
 // ═══ TEACH ═══
 function showTeach(level){
-  hideBubble(); // destroy any bubble from previous screen
+  hideBubble();
+  stopReading();
   var T=TEACH[level],name=G.name||'friend';
-  var html='<span style="font-size:2.8rem">'+T.emoji+'</span>'
-    +'<h2 class="teach-h2" style="margin-top:8px">'+T.title+'</h2>'
+  var clockSize=Math.min(Math.floor(window.innerHeight*0.26),Math.floor(window.innerWidth*0.5),170);
+
+  // Minimal intro — level name, clock example, two buttons
+  var intro='<span style="font-size:2.4rem">'+T.emoji+'</span>'
+    +'<h2 class="teach-h2" style="margin-top:6px;font-size:clamp(1.2rem,4.5vw,1.6rem)">'+T.title+'</h2>'
     +'<span class="new-badge">✨ '+T.badge+'</span>'
-    +'<p class="teach-sub">Hey <strong style="color:var(--sun)">'+name+'</strong>! '+T.intro+'</p>'
-    +'<div class="clock-wrap" style="margin:10px 0">'+buildClock(T.ex.h,T.ex.m,200,true)+'</div>'
-    +'<p class="example-label">👉 '+T.exL+'</p>';
-  T.tips.forEach(function(t){html+='<div class="tip">'+t+'</div>';});
-  html+='<div class="memory-box">🧠 <strong>Remember!</strong> '+T.mem+'</div>';
-  document.getElementById('teach-body').innerHTML=html;
+    +'<p class="teach-sub" style="margin:8px 0;font-size:clamp(.85rem,3vw,.98rem)">Hey <strong style="color:var(--sun)">'+name+'</strong>! '+T.intro+'</p>'
+    +'<div class="clock-wrap" style="margin:8px 0">'+buildClock(T.ex.h,T.ex.m,clockSize,false)+'</div>'
+    +'<p style="font-family:var(--ff);font-size:clamp(.82rem,3vw,.95rem);color:var(--sun);margin:4px 0">👉 '+T.exL+'</p>';
+  document.getElementById('teach-intro').innerHTML=intro;
+
+  // Populate popup content (hidden until Learn First tapped)
+  var popHtml='<div style="text-align:center;margin-bottom:12px">'
+    +'<span style="font-size:2rem">'+T.emoji+'</span>'
+    +'<h2 class="teach-h2" style="margin:6px 0;font-size:clamp(1.1rem,4vw,1.4rem);color:#F59E0B">'+T.title+'</h2>'
+    +'<p style="font-family:var(--ff);font-size:clamp(.82rem,3vw,.92rem);color:rgba(255,255,255,.95);font-weight:800;margin-bottom:8px">'+T.intro+'</p>'
+    +'<div class="clock-wrap" style="margin:6px 0">'+buildClock(T.ex.h,T.ex.m,140,true)+'</div>'
+    +'<p style="font-family:var(--ff);color:#F59E0B;font-size:clamp(.78rem,2.8vw,.9rem);margin:4px 0;font-weight:900">👉 '+T.exL+'</p>'
+    +'</div>';
+  T.tips.forEach(function(t){popHtml+='<div class="tip" style="font-size:clamp(.82rem,2.8vw,.95rem);padding:10px 12px;margin:5px 0;color:white;background:rgba(255,255,255,.1);border-left:5px solid #F59E0B">'+t+'</div>';});
+  popHtml+='<div style="background:#10B981;border-radius:14px;padding:12px 14px;margin-top:10px;font-family:var(--ff);font-size:clamp(.85rem,3vw,1rem);font-weight:900;color:#fff;line-height:1.4;border:2px solid #059669">🧠 Remember! '+T.mem+'</div>';
+  document.getElementById('teach-popup-body').innerHTML=popHtml;
+
   show('teach');
+}
+
+function showTeachPopup(){
+  var overlay=document.getElementById('teach-popup-overlay');
+  if(overlay){
+    overlay.style.display='flex';
+    // Scroll popup to top
+    var box=document.getElementById('teach-popup-box');
+    if(box)box.scrollTop=0;
+  }
+}
+
+function closeTeachPopup(){
+  stopReading();
+  var overlay=document.getElementById('teach-popup-overlay');
+  if(overlay)overlay.style.display='none';
 }
 
 // ═══ QUESTION GEN ═══
@@ -2291,7 +2386,8 @@ function genQuestions(level){
 
 // ═══ LEVEL START ═══
 function startLevel(){
-  stopReading(); // stop any read-aloud before game begins
+  stopReading();
+  closeTeachPopup(); // close tips popup if open
   G.qs=genQuestions(G.level);G.qi=0;G.perfect=true;G.correct=0;G.levelPts=0;G.wrongAnswers=[];G.levelCoins=0;
   G.levelStart=Date.now();G.lives=MAX_LIVES;
   document.getElementById('g-lvl').textContent='Level '+G.level;
@@ -2492,25 +2588,175 @@ function advance(){
 }
 
 // ═══ WRONG ANSWER REVIEW BUILDER ═══
+// Simple friendly text for each wrong answer card — easy for young children
+function getSimpleExplain(w){
+  var h=w.q.h, m=w.q.m, type=w.q.type;
+  var pad=function(v){return String(v).padStart(2,'0');};
+  var nextH=h===12?1:h+1;
+  var bigNum=Math.floor(m/5); if(bigNum===0)bigNum=12;
+  if(type==='oclock'){
+    return 'The long hand pointed UP to 12. That means oh clock! '
+      +'The short hand pointed to '+h+'. '
+      +'The answer is '+h+' o clock!';
+  }
+  if(type==='half'){
+    return 'The long hand pointed DOWN to 6. That means Half Past! '
+      +'The short hand had just gone past '+h+'. '
+      +'The answer is Half past '+h+'!';
+  }
+  if(type==='quarter'&&m===15){
+    return 'The long hand was on 3. That means Quarter Past! '
+      +'The short hand had just gone past '+h+'. '
+      +'The answer is Quarter past '+h+'!';
+  }
+  if(type==='quarter'&&m===45){
+    return 'The long hand was on 9. That means Quarter To! '
+      +'That means '+nextH+' is coming next. '
+      +'The answer is Quarter to '+nextH+'!';
+  }
+  // 5-min or any
+  var mins5=Math.floor(m/5)*5, extra=m-mins5;
+  if(extra>0){
+    return 'The long hand had just passed '+bigNum+'. '
+      +bigNum+' times 5 is '+mins5+' minutes, then '+extra+' more little marks, '
+      +'that makes '+m+' minutes! '
+      +'The short hand had just passed '+h+'. '
+      +'The answer is '+h+' '+pad(m)+'!';
+  }
+  return 'The long hand was pointing at '+bigNum+'. '
+    +bigNum+' times 5 is '+m+' minutes! '
+    +'The short hand had just passed '+h+'. '
+    +'The answer is '+h+' '+pad(m)+'!';
+}
+
+// Track which review card is currently being read
+var _reviewReading=null;
+
+function readReviewCard(btn, text){
+  // If this button is already reading — stop
+  if(btn.classList.contains('reading-now')){
+    try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
+    btn.classList.remove('reading-now');
+    btn.innerHTML='🔊 Read it to me!';
+    _reviewReading=null;
+    return;
+  }
+  // Stop any other reading
+  try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
+  if(_reviewReading&&_reviewReading!==btn){
+    _reviewReading.classList.remove('reading-now');
+    _reviewReading.innerHTML='🔊 Read it to me!';
+  }
+  _isReading=false;
+  // Start reading this card
+  btn.classList.add('reading-now');
+  btn.innerHTML='🔇 Tap to stop';
+  _reviewReading=btn;
+  // Play gentle chime first
+  try{
+    var ctx=getCtx();
+    [523,659,784].forEach(function(f,i){
+      setTimeout(function(){
+        var o=ctx.createOscillator(),g=ctx.createGain();
+        o.connect(g);g.connect(ctx.destination);
+        o.type='sine';o.frequency.value=f;
+        g.gain.setValueAtTime(.08,ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.3);
+        o.start(ctx.currentTime);o.stop(ctx.currentTime+.35);
+      },i*80);
+    });
+  }catch(e){}
+  setTimeout(function(){
+    if(!window.speechSynthesis||!btn.classList.contains('reading-now'))return;
+    try{
+      _grabV();
+      speechSynthesis.cancel();
+      var u=new SpeechSynthesisUtterance(text);
+      u.rate=0.88; u.pitch=1.6; u.volume=1;
+      var v=_pickV(); if(v)u.voice=v;
+      u.onend=function(){
+        btn.classList.remove('reading-now');
+        btn.innerHTML='🔊 Read it to me!';
+        _reviewReading=null;
+      };
+      u.onerror=function(){
+        btn.classList.remove('reading-now');
+        btn.innerHTML='🔊 Read it to me!';
+        _reviewReading=null;
+      };
+      speechSynthesis.speak(u);
+    }catch(e){
+      btn.classList.remove('reading-now');
+      btn.innerHTML='🔊 Read it to me!';
+      _reviewReading=null;
+    }
+  },380);
+}
+
 function buildReview(wrongList, containerId){
   if(!wrongList||!wrongList.length)return;
   var el=document.getElementById(containerId);if(!el)return;
-  var html='<div class="review-section">'
-    +'<div class="review-title">📖 Let\'s look at the ones you missed:</div>';
+  el.innerHTML='';
+
+  var section=document.createElement('div');
+  section.className='review-section';
+
+  var title=document.createElement('div');
+  title.className='review-title';
+  title.textContent='📖 Let\'s look at the ones you missed:';
+  section.appendChild(title);
+
   wrongList.forEach(function(w,idx){
-    var clockSvg=buildClock(w.q.h,w.q.m,100,false);
-    html+='<div class="review-card">'
-      +'<div class="review-clock-row">'
-      +clockSvg
-      +'<div class="review-answers">'
-      +'<div class="review-wrong">❌ You said: <strong>'+w.givenLabel+'</strong></div>'
-      +'<div class="review-correct">✅ Right answer: <strong>'+w.correctLabel+'</strong></div>'
-      +'</div></div>'
-      +'<div class="review-explain">💡 '+w.explain+'</div>'
-      +'</div>';
+    var card=document.createElement('div');
+    card.className='review-card';
+    card.style.animationDelay=(idx*0.12)+'s';
+
+    // Clock + answers row
+    var row=document.createElement('div');
+    row.className='review-clock-row';
+    var clockDiv=document.createElement('div');
+    clockDiv.innerHTML=buildClock(w.q.h,w.q.m,90,false);
+    row.appendChild(clockDiv);
+
+    var answers=document.createElement('div');
+    answers.className='review-answers';
+
+    var wrong=document.createElement('div');
+    wrong.className='review-wrong';
+    wrong.innerHTML='❌ You said: <strong>'+w.givenLabel+'</strong>';
+    answers.appendChild(wrong);
+
+    var correct=document.createElement('div');
+    correct.className='review-correct';
+    correct.innerHTML='✅ Right answer: <strong>'+w.correctLabel+'</strong>';
+    answers.appendChild(correct);
+
+    row.appendChild(answers);
+    card.appendChild(row);
+
+    // Simple explanation text
+    var simpleText=getSimpleExplain(w);
+    var explain=document.createElement('div');
+    explain.className='review-explain';
+    explain.innerHTML='💡 '+simpleText;
+    card.appendChild(explain);
+
+    // Read aloud button for this card
+    var readBtn=document.createElement('button');
+    readBtn.className='review-read-btn';
+    readBtn.innerHTML='🔊 Read it to me!';
+    var readText='You said '+w.givenLabel+'. '
+      +'The right answer was '+w.correctLabel+'. '
+      +simpleText;
+    (function(btn,txt){
+      btn.onclick=function(){ readReviewCard(btn,txt); };
+    })(readBtn, readText);
+    card.appendChild(readBtn);
+
+    section.appendChild(card);
   });
-  html+='</div>';
-  el.innerHTML=html;
+
+  el.appendChild(section);
 }
 
 // ═══ LEVEL COMPLETE ═══
@@ -2675,18 +2921,18 @@ function buildClock(h,m,size,label){
     var isQ=i%15===0, isM=i%5===0;
     var r1,r2,sw,col;
     if(isQ){
-      // Quarter marks: large, bright white with glow effect
-      r1=62;r2=89;sw=5;col='#FFFFFF';
-      // Add a small glow circle at the tick position
-      var gp=pt(a,58);
-      ticks+='<circle cx="'+gp.x+'" cy="'+gp.y+'" r="4" fill="'+MIN_COLOURS[Math.floor(i/5)%12]+'" opacity=".9"/>';
+      // Quarter marks: stop at r=75 so they never touch numbers (numbers at r=65)
+      r1=75;r2=89;sw=5;col='#FFFFFF';
+      // Coloured dot just inside the tick
+      var gp=pt(a,72);
+      ticks+='<circle cx="'+gp.x+'" cy="'+gp.y+'" r="3.5" fill="'+MIN_COLOURS[Math.floor(i/5)%12]+'" opacity=".9"/>';
     } else if(isM){
-      // 5-minute marks: medium, bright colour
-      r1=68;r2=88;sw=3.5;
+      // 5-minute marks: from r=77 outward — clear of numbers
+      r1=77;r2=88;sw=3;
       col=MIN_COLOURS[Math.floor(i/5)%12];
     } else {
-      // Minute marks: small, semi-transparent white
-      r1=81;r2=87;sw=1.5;col='rgba(255,255,255,.5)';
+      // Minute marks: tiny, near outer edge only
+      r1=83;r2=88;sw=1.5;col='rgba(255,255,255,.45)';
     }
     var p1=pt(a,r1),p2=pt(a,r2);
     ticks+='<line x1="'+p1.x+'" y1="'+p1.y+'" x2="'+p2.x+'" y2="'+p2.y+'" stroke="'+col+'" stroke-width="'+sw+'" stroke-linecap="round"/>';
@@ -2708,8 +2954,8 @@ function buildClock(h,m,size,label){
   // ── Hour numbers — big 3/6/9/12 in gold, rest in white ──
   var nums='';
   [12,1,2,3,4,5,6,7,8,9,10,11].forEach(function(n,i){
-    var ang=(i/12)*360-90,big=n%3===0,p=pt(ang,65);
-    nums+='<text x="'+p.x+'" y="'+p.y+'" text-anchor="middle" dominant-baseline="middle" fill="'+(big?'#FFD93D':'rgba(255,255,255,.9)')+'" font-family="Arial Rounded MT Bold,Helvetica Neue,Arial,sans-serif" font-size="'+(big?14:11)+'" font-weight="bold">'+n+'</text>';
+    var ang=(i/12)*360-90,big=n%3===0,p=pt(ang,62);
+    nums+='<text x="'+p.x+'" y="'+p.y+'" text-anchor="middle" dominant-baseline="middle" fill="'+(big?'#FFD93D':'rgba(255,255,255,.95)')+'" font-family="Arial Rounded MT Bold,Helvetica Neue,Arial,sans-serif" font-size="'+(big?15:11.5)+'" font-weight="bold">'+n+'</text>';
   });
 
   var mEnd=pt(mAng,74),hEnd=pt(hAng,51);
